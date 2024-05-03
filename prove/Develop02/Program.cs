@@ -36,10 +36,11 @@ class Program
         
             if (option =="2")
             {
-                anEntry.Display();
+                myJournal.DisplayAll();
             }
             if (option =="3")
             {
+
             }
             if (option =="4")
             {
