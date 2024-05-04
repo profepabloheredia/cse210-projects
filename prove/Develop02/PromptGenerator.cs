@@ -11,13 +11,15 @@ public class PromptGenerator
         _prompts.Add ("How did I see the hand of the Lord in my life today?");
         _prompts.Add ("What was the strongest emotion I felt today?");
         _prompts.Add ("If I had one thing I could do over today, what would it be?");
+        _prompts.Add ("What I forgot to do?");
+        _prompts.Add ("If I had one thing to do again, what would it be?");
 
         Random randomGenerator = new Random();
-        int number = randomGenerator.Next(0, _prompts.Count);    
+        int number = randomGenerator.Next(0, _prompts.Count);  
+        //Console.WriteLine(_prompts.Count);  
 
         string prompt = _prompts[number];
-
-        
+       
         return prompt;
 
     }

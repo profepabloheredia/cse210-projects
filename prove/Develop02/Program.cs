@@ -4,19 +4,21 @@ class Program
 {
     static void Main(string[] args)
     {
-        
         Journal myJournal = new Journal();
-        Entry anEntry =new Entry();
+        string filename = "myJournalFile.txt";
+
         string option= "";
 
-        while (option != "4")
+        while (option != "5")
         {
             Console.WriteLine("");
-            Console.WriteLine("Please Select an option.");
-            Console.WriteLine("1-Write");
-            Console.WriteLine("2-Display");
-            Console.WriteLine("3-Save");
-            Console.WriteLine("4-Quit");
+            Console.WriteLine("--Journal Options--");
+            Console.WriteLine("   1-Write new entry");
+            Console.WriteLine("   2-Display all");
+            Console.WriteLine("   3-Save to file");
+            Console.WriteLine("   4-load from file");
+            Console.WriteLine("   5-Quit");
+            Console.WriteLine("What is your choice?\b");
             option= Console.ReadLine();
 
             if (option =="1")
@@ -25,12 +27,15 @@ class Program
                 string dateText = theCurrentTime.ToShortDateString();
                 PromptGenerator pGenerator = new PromptGenerator();
                 string prompt = pGenerator.GetRandomPrompt();
+                Console.WriteLine(prompt);
+                Console.WriteLine("Your answer:");
+                string answer = Console.ReadLine();
+
+                Entry anEntry =new Entry();
                 
                 anEntry._date =dateText;
                 anEntry._prompText= prompt;
-                Console.WriteLine(prompt);
-                Console.WriteLine("Your answer:");
-                anEntry._entryText = Console.ReadLine();
+                anEntry._entryText = answer;
                 myJournal.AddEntry(anEntry);
             }
         
@@ -40,11 +45,19 @@ class Program
             }
             if (option =="3")
             {
-
+                
+                myJournal.SaveToFile(filename);
             }
             if (option =="4")
             {
+                
+                myJournal.LoadFromFile(filename);
             }
+            if (option =="5")
+            {
+                Console.WriteLine("Thanks!!!");
+            }
+            
         }
                 Console.WriteLine("");
         //
