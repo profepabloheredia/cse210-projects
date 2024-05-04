@@ -25,17 +25,19 @@ class Program
             {
                 DateTime theCurrentTime = DateTime.Now;
                 string dateText = theCurrentTime.ToShortDateString();
+
                 PromptGenerator pGenerator = new PromptGenerator();
                 string prompt = pGenerator.GetRandomPrompt();
                 Console.WriteLine(prompt);
+
                 Console.WriteLine("Your answer:");
                 string answer = Console.ReadLine();
 
                 Entry anEntry =new Entry();
-                
                 anEntry._date =dateText;
                 anEntry._prompText= prompt;
                 anEntry._entryText = answer;
+
                 myJournal.AddEntry(anEntry);
             }
         
@@ -50,32 +52,12 @@ class Program
             }
             if (option =="4")
             {
-                
                 myJournal.LoadFromFile(filename);
             }
             if (option =="5")
             {
                 Console.WriteLine("Thanks!!!");
             }
-            
         }
-                Console.WriteLine("");
-        //
-        
-
-
-
-
-
-        
-        
-
-        
-        
-
-
-
-
-        
     }
 }

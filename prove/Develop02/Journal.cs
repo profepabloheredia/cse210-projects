@@ -39,14 +39,15 @@ public class Journal
         foreach (string line in lines)
         {
             string[] parts = line.Split(",");
-
             string date = parts[0];
             string prompt = parts[1];
             string answer = parts[2];
+            
             Entry loadEntry =new Entry();
             loadEntry._date =date;
             loadEntry._prompText= prompt;
             loadEntry._entryText = answer;
+            
             AddEntry(loadEntry);
         }
 

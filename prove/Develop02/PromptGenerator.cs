@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 public class PromptGenerator
 {
-    // Create a list -- https://www.c-sharpcorner.com/UploadFile/mahesh/add-items-to-a-C-Sharp-list/
     List<string> _prompts = new List<string>();
     
     public string GetRandomPrompt()
@@ -21,6 +20,5 @@ public class PromptGenerator
         string prompt = _prompts[number];
        
         return prompt;
-
     }
 }
