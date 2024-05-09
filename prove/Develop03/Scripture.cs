@@ -6,7 +6,7 @@ public class Scripture
 
     private List<Word> _word = new List<Word>();
 
-    Scripture(Reference Reference, string Text)
+    public Scripture(Reference Reference, string Text)
     {
 
     }
