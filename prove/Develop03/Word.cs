@@ -6,7 +6,7 @@ public class Word
     private string _text;
     private bool _isHidden;
 
-    Word(string text)
+    public Word(string text)
     {
        
     }
