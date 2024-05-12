@@ -21,8 +21,8 @@ public class Reference
         _verse=verse;
         _endVerse=endVerse;
     }
-    public string GetDisplayText(){
-
+    public string GetDisplayText()
+    {
         string text;
         if (_verse != _endVerse)
         {
@@ -30,9 +30,6 @@ public class Reference
         }else {
             text= $"{_book} {_chapter}:{_verse} ";  
         }
-        
         return text;
     }
-
-
 }

@@ -1,4 +1,5 @@
 // I used Microsoft Build to solve some errors like CS1729
+//I use Reading from file the scriptures to memorize.
 
 
 using System;
@@ -27,11 +28,6 @@ class Program
 
         Reference reference =new Reference(book, chapter, verse, endVerse);
         Scripture scripture=new Scripture(reference, text);
-
-        //Console.WriteLine(scripture.GetDisplayText());
-
-        //ScriptureFromFile get = new ScriptureFromFile("AllScriptures.txt");
-        //Scripture scripture = new Scripture();
         
         Console.Clear();
         bool  quit = false;
@@ -40,8 +36,7 @@ class Program
             Console.Clear();
             Console.WriteLine(" *** Scripture Memorizer *** \n");
             Console.WriteLine(scripture.GetDisplayText());
-            
-             
+                         
             Console.WriteLine("\nPress ENTER to continue,  or type 'quit' to finish ");  
             if (Console.ReadLine() == "quit")
             {
@@ -51,23 +46,14 @@ class Program
             {   
                if (scripture.IsCompletelyHidden()==false)
                {
-                Random random = new Random();
-                int randomQuantity  = random.Next(1, 4);
-                scripture.HideRandomWords(randomQuantity);
+                    Random random = new Random();
+                    int randomQuantity  = random.Next(1, 4);
+                    scripture.HideRandomWords(randomQuantity);
                } else
                {
-                quit=true;
-                
-               } 
-                
-                            
+                    quit=true;
+               }                
             }
-            
-            
-
         }
-        
-
-
     }
 }

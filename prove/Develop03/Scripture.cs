@@ -49,9 +49,7 @@ public class Scripture
                 display = display + " " + item.GetDisplayText();
             }    
         }
-        
         return display += ".";
-
     }
     public bool IsCompletelyHidden()
     {
@@ -65,7 +63,4 @@ public class Scripture
         }
         return hidden;
     }
-
-
-
 }
