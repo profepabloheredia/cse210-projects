@@ -26,12 +26,16 @@ public class Scripture
         Random r = new Random();
         for (int i = 0; i < numberToHide; i++) 
         {
-            int randomIndex  = r.Next(0, _word.Count());
-            while (_word[randomIndex].IsHidden()==true)
+            if (IsCompletelyHidden()==false)
             {
-                randomIndex  = r.Next(1, _word.Count());
+                int randomIndex  = r.Next(0, _word.Count());
+                while (_word[randomIndex].IsHidden()==true)
+                {
+                    randomIndex  = r.Next(0, _word.Count());
+
+                }
+                _word[randomIndex].Hide();
             }
-            _word[randomIndex].Hide();
         }
     }
     public string GetDisplayText()
