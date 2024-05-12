@@ -10,14 +10,28 @@ public class Reference
     }
     public Reference(string book, int chapter, int verse)
     {
-
+        _book=book;
+        _chapter= chapter;
+        _verse=verse; 
     }
-    public Reference(string book, int chapter, int startVerse, int endVerse)
+    public Reference(string book, int chapter, int verse, int endVerse)
     {
-
+        _book=book;
+        _chapter= chapter;
+        _verse=verse;
+        _endVerse=endVerse;
     }
-    string GetDisplayText(){
-        return("");
+    public string GetDisplayText(){
+
+        string text;
+        if (_verse != _endVerse)
+        {
+            text= $"{_book} {_chapter}:{_verse}-{_endVerse} ";  
+        }else {
+            text= $"{_book} {_chapter}:{_verse} ";  
+        }
+        
+        return text;
     }
 
 

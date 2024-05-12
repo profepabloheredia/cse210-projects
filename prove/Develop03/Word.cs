@@ -8,23 +8,25 @@ public class Word
 
     public Word(string text)
     {
-       
-    }
-    void Hide()
-    {
+       _text= text;
+       _isHidden=false;
 
     }
-    void Show()
+    public void Hide()
     {
-        
+        _isHidden= true;    
     }
-    bool IsHidden()
+    public void Show()
     {
-        return false;
+        _isHidden=false;
     }
-    string GetDisplayText()
+    public bool IsHidden()
     {
-       return(""); 
+        return _isHidden;
+    }
+    public string GetDisplayText()
+    {
+       return _text; 
     }
 
 }
