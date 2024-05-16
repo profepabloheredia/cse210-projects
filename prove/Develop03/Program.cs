@@ -1,5 +1,9 @@
-// I used Microsoft Build to solve some errors like CS1729
-//I use Reading from file the scriptures to memorize.
+/* For exceeding requirements, I Added a file with most common scriptures to memorize. 
+This programm Read from this file and shows randomly
+a line with a scripture(Book, chapter, initial vers, end verse , text). 
+The file is a text file with separated values by "~" 
+I also considered not nessesary to Add a new class for thids behavior
+*/
 
 
 using System;
@@ -25,6 +29,8 @@ class Program
         int verse = Convert.ToInt32(parts[2]);
         int endVerse = Convert.ToInt32(parts[3]);
         string text = parts[4];
+
+
 
         Reference reference =new Reference(book, chapter, verse, endVerse);
         Scripture scripture=new Scripture(reference, text);
