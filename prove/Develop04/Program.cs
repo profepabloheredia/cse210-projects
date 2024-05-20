@@ -23,7 +23,7 @@ class Program
             Console.WriteLine("   3. Start listing activity");
             Console.WriteLine("   4. Show activity records");
             Console.WriteLine("   5. Quit");
-            Console.WriteLine("What is your choice?\b");
+            Console.Write("What is your choice?");
             option= Console.ReadLine();
 
             if (option =="1")
@@ -73,7 +73,7 @@ class Program
                 Console.WriteLine($"{date} - {name}- \tTime spent: {time} seconds.");
                 }
                 Console.WriteLine($" --- Total Time: {seconds} seconds. ---");
-                Console.WriteLine("\npress enter to continue.");
+                Console.Write("\nPress enter to continue.");
                 Console.ReadLine();
             }    
             if (option =="5")
