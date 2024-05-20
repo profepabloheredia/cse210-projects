@@ -1,12 +1,12 @@
 using System.Security.Cryptography.X509Certificates;
 
-public class ReflectingActivity
+public class ReflectingActivity: Activity
 {
 
     private List<String> _prompts= new List<string>();
     private List<String> _questions= new List<string>();
 
-    public ReflectingActivity()
+    public ReflectingActivity(string name, string description): base(name, description)
     {
         _prompts.Add("Think of a time when you stood up for someone else.");
         _prompts.Add("Think of a time when you did something really difficult.");
@@ -22,30 +22,24 @@ public class ReflectingActivity
         _questions.Add(" What could you learn from this experience that applies to other situations?");
         _questions.Add(" What did you learn about yourself through this experience?");
         _questions.Add(" How can you keep this experience in mind in the future?");
-        
-        
-       
+                      
     } 
     public void Run()
     {
-       
-        string name= "Reflecting Activity.";
-        string description="\nThis activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
-        Activity activity=new Activity(name, description);
-        
+    
         Console.Clear();
-        activity.DisplayStartingMessage();
+        DisplayStartingMessage();
         int seconds= Convert.ToInt32(Console.ReadLine());
-        activity.SetDuration(seconds);
+        SetDuration(seconds);
         Console.Clear();
         Console.WriteLine("Get Ready...");
-        activity.ShowSpinner(5);
+        ShowSpinner(5);
         Console.WriteLine("");
         DisplayPrompt();
         Console.ReadLine();
         Console .WriteLine("\nNow ponder on each of the following questions as they related to this experience.");
         Console .Write("\nYou may begin in : ");
-        activity.ShowCountDown(5);
+        ShowCountDown(5);
         Console.Clear();
 
         DateTime currentTime = DateTime.Now;
@@ -54,12 +48,12 @@ public class ReflectingActivity
         while (currentTime < endTime)
         {
             DisplayQuestions();
-            activity.ShowSpinner(5);
+            ShowSpinner(5);
             currentTime= DateTime.Now;
 
         }
-        activity.DisplayEndingMessage();
-        activity.ShowSpinner(5);
+        DisplayEndingMessage();
+        ShowSpinner(5);
     
     }
     public string GetRandomPrompt()

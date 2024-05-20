@@ -22,7 +22,9 @@ class Program
             if (option =="1")
             {
                 Console.Clear();
-                BreathingActivity breathing = new BreathingActivity();
+                string name= "Breathing Activity.";
+                string description="\nThis activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
+                BreathingActivity breathing = new BreathingActivity(name, description);
                 breathing.Run();
                 
             }
@@ -30,13 +32,18 @@ class Program
             if (option =="2")
             {
                 Console.Clear();
-                ReflectingActivity reflecting = new ReflectingActivity();
+                string name= "Reflecting Activity.";
+                string description="\nThis activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
+                ReflectingActivity reflecting = new ReflectingActivity(name, description);
                 reflecting.Run();
             }
             if (option =="3")
             {
                 Console.Clear();
-                ListingActivity listing = new ListingActivity();
+                string name= "Listing Activity.";
+                string description="\nThis activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
+              
+                ListingActivity listing = new ListingActivity(name, description);
                 listing.Run();
                 
             }

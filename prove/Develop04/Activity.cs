@@ -4,7 +4,11 @@ public class Activity
     private string _name;
     private string _description;
     private int _duration;
-
+    public Activity()
+    {
+        _name="";
+        _description="";
+    }
     public Activity(string name, string description)
     {
         _name = name;
@@ -35,6 +39,10 @@ public class Activity
         character.Add("/");
         character.Add("-");
         character.Add("\\");
+        character.Add("|");
+        character.Add("/");
+        character.Add("-");
+        character.Add("\\");
       
         DateTime currentTime = DateTime.Now;
         DateTime endTime = currentTime.AddSeconds(seconds);
@@ -42,8 +50,9 @@ public class Activity
         foreach (string c in character)
         {
             Console.Write(c);
-            Thread.Sleep(1000);
-            Console.Write("\b \b");
+            Console.Write("  ");
+            Thread.Sleep(500);
+            Console.Write("\b\b\b");
             if (currentTime >= endTime)
             {
                 break;
@@ -55,8 +64,9 @@ public class Activity
         for (int i= seconds; i > 0; i--)
         {
             Console.Write(i);
+            Console.Write(" ");
             Thread.Sleep(1000);
-            Console.Write("\b \b");
+            Console.Write("\b\b");
         }
     }
 
