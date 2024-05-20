@@ -75,7 +75,7 @@ public class ReflectingActivity: Activity
     }
     public void DisplayQuestions()
     {
-        Console.Write("> " + GetRandomquestion() );
+        Console.WriteLine("> " + GetRandomquestion() );
     }
 
 }

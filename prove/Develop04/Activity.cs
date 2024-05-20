@@ -1,6 +1,7 @@
+using System.Xml.Linq;
+
 public class Activity
 {
-
     private string _name;
     private string _description;
     private int _duration;
@@ -18,22 +19,19 @@ public class Activity
     {
         Console.WriteLine("Welcome to the " + _name);
         Console.WriteLine(_description);
-        Console.Write("\nHow long, in seconds, would you like for your session? ");
-                
+        Console.Write("\nHow long, in seconds, would you like for your session? ");         
     }
     public void DisplayEndingMessage()
     {
         Console.WriteLine("\nWell done!!");
         Console.WriteLine($"\nYou have completet another {_duration} seconds of the {_name}!!");
     }
-    
     public void SetDuration(int seconds)
     {
         _duration= seconds;
     }
     public void ShowSpinner(int seconds)
-    {
-                          
+    {                   
         List<string> character =new List<string>();
         character.Add("|");
         character.Add("/");
@@ -69,5 +67,18 @@ public class Activity
             Console.Write("\b\b");
         }
     }
+    public void SaveToAFile(String file)
+    {
+        DateTime current = DateTime.Now;
+        current=current.Date;
+        //Console.WriteLine (current);
 
+        using (StreamWriter outputFile = new StreamWriter(file, true))
+        {
+            string line =($"{current},{_name},{_duration}");
+            outputFile.WriteLine(line);
+        }
+        Console.WriteLine("\nActivity saved!");
+        Thread.Sleep(2000);
+    }
 }
