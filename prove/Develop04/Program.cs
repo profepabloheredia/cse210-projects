@@ -57,7 +57,7 @@ class Program
             }
             if (option =="4")
             {
-                Console.WriteLine("\n Activities you Done");
+                Console.WriteLine("\n --- Activities you Done --- ");
 
                 int seconds = 0;
                 string[] lines = System.IO.File.ReadAllLines(fileName);
@@ -70,9 +70,10 @@ class Program
                 int time = Convert.ToInt32(parts[2]);
                 seconds += time;
 
-                Console.WriteLine($"{date} - {name} - time spent:{time}.");
+                Console.WriteLine($"{date} - {name}- \tTime spent: {time} seconds.");
                 }
-                Console.WriteLine($" --- Total Time: {seconds}seconds. ---");
+                Console.WriteLine($" --- Total Time: {seconds} seconds. ---");
+                Console.WriteLine("\npress enter to continue.");
                 Console.ReadLine();
             }    
             if (option =="5")
