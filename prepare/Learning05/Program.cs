@@ -8,21 +8,19 @@ class Program
         Console.WriteLine("\n *** Learning 5 Test ***\n");
 
         Square sq =new Square("White", 4);
-        ShowResults(sq);
-
-
+       // ShowResults(sq);
         // Console.WriteLine(sq.GetColor());
         // Console.WriteLine(sq.GetArea());
         // Console.WriteLine("");
 
         Rectangle rec =new Rectangle("Black", 6, 4);
-        ShowResults(rec);
+       // ShowResults(rec);
         // Console.WriteLine(rec.GetColor());
         // Console.WriteLine(rec.GetArea());
         // Console.WriteLine("");
 
         Circle circle =new Circle("Blue", 4);
-        ShowResults(circle);
+        //ShowResults(circle);
         // Console.WriteLine(circle.GetColor());
         // Console.WriteLine(circle.GetArea());
         // Console.WriteLine("");
@@ -33,16 +31,17 @@ class Program
         list.Add(circle);
         foreach (Shape shape in list)
         {
-            Console.WriteLine(shape.GetColor());
-            Console.WriteLine(shape.GetArea());
+             ShowResults(shape);
+            // Console.WriteLine(shape.GetColor());
+            // Console.WriteLine(shape.GetArea());
         }
     }
     public static void ShowResults(Shape shape)
     {
         
-        // Console.WriteLine("");
-        // Console.WriteLine(shape.GetColor());
-        // Console.WriteLine(shape.GetArea());
+        Console.WriteLine("");
+        Console.WriteLine(shape.GetColor());
+        Console.WriteLine(shape.GetArea());
 
     }
 }
