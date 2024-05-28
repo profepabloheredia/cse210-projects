@@ -1,4 +1,4 @@
-Score:56
-SimpleGoal:jksdfgkaesd~wsedjfasdjadskafols~44~True
-EternalGoal:lfjkaks~dfg567534~15
-CheckListGoal:lkdjshsaj~345gcxzsdasgsdfgssdf~56~456~2~2
+Score:100
+SimpleGoal:jksdfgkaesd~wsedjfasdjadskafols~10~True
+EternalGoal:lfjkaks~dfg567534~50
+CheckListGoal:lkdjshsaj~345gcxzsdasgsdfgssdf~40~100~3~1

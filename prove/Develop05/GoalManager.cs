@@ -14,8 +14,6 @@ public class GoalManager
     {
         _score=score;
     }
-    
-
     public void Start()
     {
         Console.WriteLine($"\n*** You have {_score} points ***\n");
@@ -30,7 +28,11 @@ public class GoalManager
     }
     public void DisplayPlayerInfo()
     {
-
+        Console.WriteLine("\nThe type of Goals are:");
+        Console.WriteLine("   1. Simple Goal");
+        Console.WriteLine("   2. Eternal Goal");
+        Console.WriteLine("   3. Checklist Goal");
+        Console.Write("Which type of Goal would  you like to create?");
     }
     public void ListGoalNames()
     {
@@ -86,16 +88,22 @@ public class GoalManager
       
         if (index <= _goals.Count())
         {
-            index-=1;
+            index-=1;//substract 1 to the index number to fit with the list index
             _goals[index].RecordEvent();
+            
+            if (_goals[index].IsComplete())
+            {          
+                int points=Convert.ToInt32(_goals[index].GetPoints());
+                Console.WriteLine($"congratulation you have earned {points} points!!!");                
+            }
+            _score += Convert.ToInt32(_goals[index].GetPoints());
+            Console.WriteLine($"Now you have {_score} points");
         }
     }
     public void SaveGoals(string filename)
     {
-
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
-           
             outputFile.WriteLine($"Score:{_score}");
 
             foreach(Goal goal in _goals)
@@ -107,14 +115,11 @@ public class GoalManager
     public void LoadGoals(string filename)
     {
         _goals.Clear();
-      //  string firstLine= System.IO.File.ReadAllLines(filename)[0];
-        
 
         string[] lines = System.IO.File.ReadAllLines(filename);
 
         foreach (string line in lines)
         {
-
             string[] parts = line.Split("~");
             string[] heading = parts[0].Split(":");
             string goalType = heading[0];

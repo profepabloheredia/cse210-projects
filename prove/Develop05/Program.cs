@@ -17,11 +17,7 @@ class Program
             {
                 string typeOption;
                
-                Console.WriteLine("\nThe type of Goals are:");
-                Console.WriteLine("   1. Simple Goal");
-                Console.WriteLine("   2. Eternal Goal");
-                Console.WriteLine("   3. Checklist Goal");
-                Console.Write("Which type of Goal would  you like to create?");
+                goalManager.DisplayPlayerInfo();
                 typeOption= Console.ReadLine();
 
                 if (typeOption =="1") //simple goal statments
@@ -53,9 +49,7 @@ class Program
                 Console.Write("\n Type your goals file: ");
                 string filename = Console.ReadLine();
                 
-                goalManager.LoadGoals(filename);
-
-          
+                goalManager.LoadGoals(filename);          
             }    
             if (option =="5")
             {

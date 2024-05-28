@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Dynamic;
 
 public abstract class Goal
 {
@@ -24,6 +25,10 @@ public abstract class Goal
     public string GetPoints()
     {
         return _points;
+    }
+    public void SetPoints(string points)
+    {
+        _points = points;
     }
     public abstract void RecordEvent();
     

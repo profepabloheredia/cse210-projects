@@ -3,6 +3,8 @@ class CheckListGoal:Goal
     private int _amountCompleted;
     private int _target;
     private int _bonus;
+    
+    
     public CheckListGoal(string name, string description, string points, int target, int bonus):base(name, description, points)
     {
         _target=target;
@@ -14,13 +16,26 @@ class CheckListGoal:Goal
     {
         _amountCompleted= ammount;
     }
+    public int GetTotalPoints()
+    {
+        int total = Convert.ToInt32(GetPoints());
+        total += _bonus;
+        return total;
+    }
     public override void RecordEvent()
     {
         _amountCompleted ++;
+       
     }
     public override bool IsComplete()
-    {
-        return false;
+    {   
+        bool complete = false;
+        if (_amountCompleted ==_target)
+        {
+            complete = true;
+            SetPoints(Convert.ToString(GetTotalPoints()));
+        }
+        return  complete;
     }
 
     public override string GetStringRepresentation()
