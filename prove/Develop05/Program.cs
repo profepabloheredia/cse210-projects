@@ -3,7 +3,7 @@ using System.Numerics;
 
 /*
 I added a compare function as "option 6"
-it let us to compare 2 files showing it's scores and leaving a motivatin message. 
+it let us to compare 2 files showing it's scores and leaving a motivating message. 
 */
 
 class Program
@@ -13,7 +13,7 @@ class Program
         string fileName1="Goals.txt";
         Console.Clear();
         GoalManager goalManager=new GoalManager();
-        
+
         string option= "";
         while (option != "6")
         { 
