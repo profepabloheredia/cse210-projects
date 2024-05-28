@@ -9,7 +9,7 @@ class Program
         string option= "";
         while (option != "6")
         {
-            //Console.Clear();
+            Console.Clear();
             goalManager.Start();
             option= Console.ReadLine();
 
