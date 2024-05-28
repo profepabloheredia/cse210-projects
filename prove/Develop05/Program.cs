@@ -94,7 +94,7 @@ class Program
                 Console.WriteLine($"Comparing first File({fileName1}) to the last one({fileName2})");
                 if (score2 > score1)
                 {
-                    Console.WriteLine($"YOU DARE DOING A GREAT JOB AND INCREASES {score2 - score1} POINTS!!!");
+                    Console.WriteLine($"#### YOU ARE DOING A GREAT JOB AND INCREASES {score2 - score1} POINTS!!! ####\n");
                 }
                 if (score2 == score1)
                 {
@@ -102,7 +102,7 @@ class Program
                 }
                 if (score2 < score1 * 1.1) //if diference between  first score and the second is greater than 10%
                 {
-                    Console.WriteLine($"YOU MUST TO CHECK YOUR GOALS\n");
+                    Console.WriteLine($"YOU MUST TO CHECK YOUR GOALS :(\n");
                 }
 
             }

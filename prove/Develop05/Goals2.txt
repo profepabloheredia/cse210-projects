@@ -1,6 +1,6 @@
-Score:100
+Score:490
 SimpleGoal:Practice 15' of english~reading and speaking outloud english~25~True
 SimpleGoal:run~Run for at least 20 minutes ~20~False
 EternalGoal:church~Attend the church each week for 2 month ~30
 CheckListGoal:temple~go to the temple twice a month~150~100~2~2
-CheckListGoal:invite people ~invite friends to home evening 3 times in the year~30~300~3~0
+CheckListGoal:invite people ~invite friends to home evening 3 times in the year~330~300~3~3
