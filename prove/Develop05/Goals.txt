@@ -1,4 +1,4 @@
-Score:240
+Score:270
 SimpleGoal:Practice 15' of english~reading and speaking outloud english~10~True
 SimpleGoal:run in the morning~Run for at least 20 minutes ~20~False
 EternalGoal:Attend the church~Attend the church each week for 2 month ~30

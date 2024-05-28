@@ -25,6 +25,14 @@ class CheckListGoal:Goal
     public override void RecordEvent()
     {
         _amountCompleted ++;
+
+        if (IsComplete())
+        {
+            string totalPoints=Convert.ToString(GetTotalPoints());
+            SetPoints(totalPoints);
+            Console.WriteLine($"congratulation you have earned {totalPoints} points!!!");  
+        }
+        
        
     }
     public override bool IsComplete()
@@ -33,13 +41,9 @@ class CheckListGoal:Goal
         if (_amountCompleted ==_target)
         {
             complete = true;
-            string totalPoints=Convert.ToString(GetTotalPoints());
-            SetPoints(totalPoints); 
-            Console.WriteLine($"congratulation you have earned {totalPoints} points!!!"); 
         }
         return  complete;
     }
-
     public override string GetStringRepresentation()
     {
         string text = $"CheckListGoal:{base.GetName()}~{base.GetDescription()}~{base.GetPoints()}~{_bonus}~{_target}~{_amountCompleted}";

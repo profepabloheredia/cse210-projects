@@ -4,12 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-                
+        Console.Clear();
         GoalManager goalManager=new GoalManager();
         string option= "";
         while (option != "6")
         {
-            Console.Clear();
+            
             goalManager.Start();
             option= Console.ReadLine();
 
@@ -43,13 +43,15 @@ class Program
                 Console.Write("\n Type your goals file: ");
                 string filename = Console.ReadLine();
                 goalManager.SaveGoals(filename);
+                Console.Clear();
             }
             if (option =="4")
             {
                 Console.Write("\n Type your goals file: ");
                 string filename = Console.ReadLine();
                 
-                goalManager.LoadGoals(filename);          
+                goalManager.LoadGoals(filename);
+                Console.Clear();          
             }    
             if (option =="5")
             {
