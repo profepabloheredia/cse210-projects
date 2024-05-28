@@ -33,7 +33,9 @@ class CheckListGoal:Goal
         if (_amountCompleted ==_target)
         {
             complete = true;
-            SetPoints(Convert.ToString(GetTotalPoints()));
+            string totalPoints=Convert.ToString(GetTotalPoints());
+            SetPoints(totalPoints); 
+            Console.WriteLine($"congratulation you have earned {totalPoints} points!!!"); 
         }
         return  complete;
     }

@@ -1,4 +1,6 @@
-Score:100
-SimpleGoal:jksdfgkaesd~wsedjfasdjadskafols~10~True
-EternalGoal:lfjkaks~dfg567534~50
-CheckListGoal:lkdjshsaj~345gcxzsdasgsdfgssdf~40~100~3~1
+Score:240
+SimpleGoal:Practice 15' of english~reading and speaking outloud english~10~True
+SimpleGoal:run in the morning~Run for at least 20 minutes ~20~False
+EternalGoal:Attend the church~Attend the church each week for 2 month ~30
+CheckListGoal:go to the temple~go to the temple twice a month~150~100~2~2
+CheckListGoal:invite people to home~invite friends to home evening 3 times in the year~30~300~3~0

@@ -94,10 +94,9 @@ public class GoalManager
             if (_goals[index].IsComplete())
             {          
                 int points=Convert.ToInt32(_goals[index].GetPoints());
-                Console.WriteLine($"congratulation you have earned {points} points!!!");                
+                Console.WriteLine($"Now you have {_score + points} points");               
             }
             _score += Convert.ToInt32(_goals[index].GetPoints());
-            Console.WriteLine($"Now you have {_score} points");
         }
     }
     public void SaveGoals(string filename)
