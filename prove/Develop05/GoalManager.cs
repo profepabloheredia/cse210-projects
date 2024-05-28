@@ -14,6 +14,10 @@ public class GoalManager
     {
         _score=score;
     }
+    public int GetScore()
+    {
+        return _score;
+    }
     public void Start()
     {
         Console.WriteLine($"\n*** You have {_score} points ***\n");
@@ -23,7 +27,8 @@ public class GoalManager
         Console.WriteLine("   3. Save Goals");
         Console.WriteLine("   4. Load Gols");
         Console.WriteLine("   5. Record Event");
-        Console.WriteLine("   6. Quit");
+        Console.WriteLine("   6. Compare W/another Goals File");
+        Console.WriteLine("   7. Quit");
         Console.Write("What is your choice?");
     }
     public void DisplayPlayerInfo()
