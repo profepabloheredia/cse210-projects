@@ -2,8 +2,9 @@ using System;
 using System.Numerics;
 
 /*
-I added a compare function as "option 6"
-it let us to compare 2 files showing it's scores and leaving a motivating message. 
+For Exceeding Requirements
+I added a compare function as "option 6" into the main.
+It let us to compare 2 files showing it's scores and leaving a motivating message. 
 */
 
 class Program
@@ -98,7 +99,7 @@ class Program
                 }
                 if (score2 == score1)
                 {
-                    Console.WriteLine($"You can improve yourself!!!");
+                    Console.WriteLine($" You're doing well. You can improve yourself!!!");
                 }
                 if (score2 < score1 * 1.1) //if diference between  first score and the second is greater than 10%
                 {
