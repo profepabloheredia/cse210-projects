@@ -4,8 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
         Console.WriteLine("");
-
+        
         Video Video1= new Video();
         Video1._author= "Peter Hollens";
         Video1._title= "Pirate of caribean";
@@ -71,9 +72,5 @@ class Program
         Video3._comments.Add(comment9);
         
         Video3.DisplayVideo();
-       
-
-
-
     }
 }

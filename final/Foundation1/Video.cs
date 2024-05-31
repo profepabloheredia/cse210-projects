@@ -13,16 +13,12 @@ public class Video
     {
         Console.WriteLine($"Title: {_title} - Author:{_author} - Length:{_length} Seconds");
         Console.WriteLine($"--{GetCommentsNumber()} Comments--");
-        DisplayComments();
-    }    
-    public void DisplayComments()
-    {
+        
         foreach (Comment comment in _comments)
         {
            comment.DisplayComment();
         }
         Console.WriteLine("");
-    }
-    
-
+    }    
+   
 }
