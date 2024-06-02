@@ -16,7 +16,7 @@ public class Address
         _country = country;
     }  
    
-    public string GetFullAddress()
+    public string GetAddress()
     { 
         return $"{_street}, {_city}\n{_state} - {_country}";
     }
