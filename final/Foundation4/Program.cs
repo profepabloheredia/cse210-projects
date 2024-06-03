@@ -8,13 +8,13 @@ class Program
         Console.WriteLine(" ******** Foundation4 *********\n");
        
         String date ="04 Oct 2023";
-        double length =85;
-        double speed = 70;
+        double length =80;
+        double speed = 30;
         Cycling cycling = new Cycling(date, length, speed);
         cycling.GetSummary("CYCLING");
 
         date ="10 Nov 2023";
-        length =25;
+        length =20;
         int laps = 30;
         Swimming swimming = new Swimming(date, length, laps);
         swimming.GetSummary("SWIMMING");
